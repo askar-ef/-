@@ -1,0 +1,1 @@
+alert("misi nupal mok lewattt 🚶🏻🚶🏻")
