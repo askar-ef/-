@@ -37,10 +37,20 @@ Route::get('/pricing', function () {
     return view('pricing');
 });
 
+
 Route::get('/nupal', function () {
     return view('nupal', [
         "name" => "Naufal Tri Subakti",
         "class" => "TRPL A2",
+        "from" => "Kulonprogo",
+        "image" => "nupal.png"
+    ]);
+});
+
+Route::get('/teman', function () {
+    return view('teman', [
+        "name" => "Rodrigo Nopal",
+        "class" => "SET 2022",
         "from" => "Kulonprogo",
         "image" => "nupal.png"
     ]);
