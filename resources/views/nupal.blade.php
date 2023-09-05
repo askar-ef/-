@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <h1> <?= $name; ?> </h1>
-    <h2> <?= $class; ?> </h2>
-    <h2> <?= $from; ?> </h2>
+    <h1> {{ $name }} </h1>
+    <h2> {{ $class }} </h2>
+    <h2> {{ $from }} </h2>
     <img src="image/<?= $image; ?>" alt="nupalll" width="400">
 
     <script src="js/script.js"></script>

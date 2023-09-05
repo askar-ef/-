@@ -17,8 +17,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/askar', function () {
-    return view('askar');
+Route::get('/halo', function () {
+    return view('halo');
+});
+
+Route::get('/company', function () {
+    return view('company');
+});
+
+Route::get('/main', function () {
+    return view('layouts.main');
+});
+
+Route::get('/features', function () {
+    return view('features');
+});
+
+Route::get('/pricing', function () {
+    return view('pricing');
 });
 
 Route::get('/nupal', function () {
