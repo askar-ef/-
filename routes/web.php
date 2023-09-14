@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/buku', [PostController::class, 'buku']);
+
 Route::get('/halo', [PostController::class, 'index']);
 
 Route::get('/company', function () {
@@ -35,7 +37,6 @@ Route::get('/features', function () {
 Route::get('/pricing', function () {
     return view('pricing');
 });
-
 
 Route::get('/nupal', function () {
     return view('nupal', [

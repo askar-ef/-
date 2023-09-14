@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Buku;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -14,51 +15,11 @@ class PostController extends Controller
         return view('halo');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function buku()
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        $data_buku = Buku::all();
+        $jumlah_buku = Buku::count();
+        $jumlah_harga = Buku::sum('harga');
+        return view('buku', compact('data_buku', 'jumlah_buku', 'jumlah_harga'));
     }
 }
