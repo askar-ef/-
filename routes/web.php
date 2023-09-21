@@ -19,6 +19,14 @@ Route::get('/', function () {
 });
 
 Route::get('/buku', [PostController::class, 'buku']);
+Route::get('/buku/create', [PostController::class, 'create'])->name('buku.create');
+Route::post('/buku', [PostController::class, 'store'])->name('buku.store');
+
+Route::get('/buku/update/{id}', [PostController::class, 'update'])->name('buku.update');
+Route::post('/buku/update/submit/{id}', [PostController::class, 'updatedata'])->name('buku.updatedata');
+
+Route::post('/buku/delete/{id}', [PostController::class, 'destroy'])->name('buku.destroy');
+
 
 Route::get('/halo', [PostController::class, 'index']);
 
