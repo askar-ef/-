@@ -18,7 +18,6 @@
                 <th class="px-4 py-2 bg-gray-200">Harga</th>
                 <th class="px-4 py-2 bg-gray-200">Tanggal Terbit</th>
                 <th class="px-4 py-2 bg-gray-200">Hapus</th>
-                <th class="px-4 py-2 bg-gray-200">Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -34,10 +33,9 @@
                     @csrf
                     <button onclick="return confirm('Beneran nih mau dihapus?')">Hapus</button>
                     </form>
-                </td>
-                <td>
-                <form action="{{ route('buku.update', $buku->id) }}" method="post">
-                <p><a href="{{ route('buku.update', $buku->id) }}">Edit</a></p>
+                    <form action="{{ route('buku.update', $buku->id) }}" method="post">
+                        <p><a href="{{ route('buku.update', $buku->id) }}">Edit</a></p>
+
                 </td>
             </tr>
             @endforeach
