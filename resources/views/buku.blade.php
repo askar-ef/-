@@ -33,8 +33,8 @@
                     @csrf
                     <button onclick="return confirm('Beneran nih mau dihapus?')">Hapus</button>
                     </form>
-                    {{-- <form action="{{ route('buku.update', $buku->id) }}" method="post">
-                        <p><a href="{{ route('buku.update', $buku->id) }}">Edit</a></p> --}}
+                    <form action="{{ route('buku.update', $buku->id) }}" method="post">
+                        <p><a href="{{ route('buku.update', $buku->id) }}">Edit</a></p>
                 </td>
             </tr>
             @endforeach
