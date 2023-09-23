@@ -12,7 +12,7 @@
     <table class="w-full border-collapse border border-gray-300">
         <thead>
             <tr>
-                <th class="px-4 py-2 bg-gray-200">ID</th>
+                <th class="px-4 py-2 bg-gray-200">No</th>
                 <th class="px-4 py-2 bg-gray-200">Judul Buku</th>
                 <th class="px-4 py-2 bg-gray-200">Penulis</th>
                 <th class="px-4 py-2 bg-gray-200">Harga</th>
@@ -33,9 +33,8 @@
                     @csrf
                     <button onclick="return confirm('Beneran nih mau dihapus?')">Hapus</button>
                     </form>
-                    <form action="{{ route('buku.update', $buku->id) }}" method="post">
-                        <p><a href="{{ route('buku.update', $buku->id) }}">Edit</a></p>
-
+                    {{-- <form action="{{ route('buku.update', $buku->id) }}" method="post">
+                        <p><a href="{{ route('buku.update', $buku->id) }}">Edit</a></p> --}}
                 </td>
             </tr>
             @endforeach
@@ -46,44 +45,3 @@
     <br><br><br>
     <p><a href="{{ route('buku.create') }}">Tambah Buku</a></p>
 </div>
-
-
-{{-- <div>
-    <table>
-        <thead>
-            <tr>
-                <th>id</th>
-                <th>judul buku</th>
-                <th>penulis</th>
-                <th>harga</th>
-                <th>tanggal terbit</th>
-                <th>aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($data_buku as $buku)
-            <tr>
-                <td>{{ $buku->id }}</td>
-                <td>{{ $buku->judul }}</td>
-                <td>{{ $buku->penulis }}</td>
-                <td>{{ "Rp ".number_format($buku->harga, 2, ",", ".") }}</td>
-                <td>{{date('d/m/Y', strtotime($buku->tgl_terbit))}}</td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-</div> --}}
-
-
-{{-- 
-
-@foreach ($data_buku as $buku)
-<div>
-    {{ $buku->id }} <br/>
-    {{ $buku->judul }} <br/>
-    {{ $buku->penulis }} <br/>
-    {{ $buku->harga }} <br/>
-    {{date('d/m/Y', strtotime($buku->tgl_terbit))}}
-    <hr>
-</div>
-@endforeach --}}
