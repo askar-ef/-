@@ -13,5 +13,5 @@
             <a href="/buku">Batal</a>
             </div>
         </form>
-    </div>
+    </div
 @endsection
